@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html lang="{{ site.lang }}">
+  {% include head.html %}
+  <body>
+    <div class="content">
+      {% include nav.html %}
+      {% include header.html %}
+          {{ content | remove: "<!-- mdpo-disable -->" | remove: "<!-- mdpo-enable -->" | remove: "<!-- mdpo-disable-next-line -->" | remove: "<!-- mdpo-enable-next-line -->" }}
+    </div>
+    {% include footer.html %}
+  </body>
+</html>
